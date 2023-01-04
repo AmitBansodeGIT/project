@@ -1,2 +1,2 @@
 FROM tomcat
-COPY target/LoginWebApp.war /usr/local/tomcat/webapp/
+COPY target/LoginWebApp.war /usr/local/tomcat/webapps/
