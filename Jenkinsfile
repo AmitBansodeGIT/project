@@ -31,9 +31,11 @@ label {
 		
 				steps {
 						
-						sh "sudo docker build -t tomcatproject:1 /mnt/project-myapp "
+					sh "sudo docker build -t tomcatproject:1 /mnt/project-myapp "
 
-						}
+				}
+			steps {
+					sh " sudo docker run -p 8080:8080 tomcatproject:1 "
 				
 				}
 	
