@@ -1,21 +1,19 @@
 pipeline {
 agent {
 label {
-		label "built-in"
-		customWorkspace "/data/project-myapp"
+		label "qa"
+		customWorkspace "/mnt/project-myapp"
 		
 		}
 		}
 		
 	stages {
 		
-		stage ('CLEAN_OLD_M2') {
+		stage ('Pull_SRC') {
 			
 			steps {
-				sh "rm -rf /home/saccount/.m2/repository"
-				
+				sh "git pull https://github.com/AmitBansodeGIT/project.git
 			}
-			
 		}
 	
 		stage ('MAVEN_BUILD') {
@@ -29,11 +27,11 @@ label {
 		
 		}
 		
-		stage ('COPY_WAR_TO_Server'){
+		stage ('Deploy_with_dockerfile'){
 		
 				steps {
 						
-						sh "scp -r target/LoginWebApp.war saccount@10.0.2.51:/data/project/wars"
+						sh "sudo docker build -t tomcatproject:1 /mnt/project-myapp "
 
 						}
 				
