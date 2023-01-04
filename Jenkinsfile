@@ -33,7 +33,7 @@ label {
 						
 					sh "sudo docker build -t tomcatproject:1 /mnt/project-myapp "
 
-					sh " sudo docker run -d -p 8080:8080 tomcatproject:1 "
+					sh " sudo docker run -d -p 8089:8080 tomcatproject:1 "
 				
 				}
 	
