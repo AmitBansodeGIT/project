@@ -5,6 +5,7 @@ label {
 		customWorkspace "/mnt/project-myapp"
 		
 		}
+		}
 		
 	stages {
 		
