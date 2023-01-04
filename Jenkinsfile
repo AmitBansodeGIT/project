@@ -12,7 +12,7 @@ label {
 		stage ('Pull_SRC') {
 			
 			steps {
-				sh "git pull https://github.com/AmitBansodeGIT/project.git
+				sh " sudo git pull https://github.com/AmitBansodeGIT/project.git "
 			}
 		}
 	
@@ -20,7 +20,7 @@ label {
 		
 			steps {
 						
-						sh "mvn clean package"
+						sh "sudo mvn clean package"
 			
 			}
 			
